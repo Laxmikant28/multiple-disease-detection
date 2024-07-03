@@ -1,0 +1,49 @@
+
+body{
+/* background-color: rgb(54, 51, 51); */
+background-image: url('black background.jpg');
+background-size: cover;
+color: white;
+}
+.heading {
+    /* background-color: aqua; */
+    padding: 20px;
+    text-align: center;
+ 
+}
+h1{
+    font-size: 70px;
+}
+
+.options {
+    /* background-color: bisque; */
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+ 
+}
+
+.opt {
+    padding: 20px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: rgb(235, 152, 50);
+
+
+}
+a{
+  text-decoration: none;
+  font-size: 20px;
+}
+.page {
+    display: flex;
+}
+
+.intro {
+   
+    /* background-color: chartreuse; */
+    width: 80%;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+  
+}

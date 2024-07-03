@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="static/css/ddresult.css">
+</head>
+<body>
+<div class="result">
+    {% if result==0: %}
+    <h2 class="green">You are well.. </h2>
+    {% else: %}
+    <h2 class="red">You are Detected as Diabetes Patient....</h2>
+    {% endif %}
+</div>
+
+<div class="suggestion">
+    <h2 class="head">Here are some suggestion...</h2>
+<div class="glucose">
+    {% if 70 > blood_glucose_level : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+    <div class="ans">
+    <li>Potentially Dangerous Low Blood Sugar.</li>
+    <strong>Preventative Measures:</strong>
+    <li> Seek immediate medical attention. This level indicates hypoglycemia, which can be life-threatening and wouldn't typically occur after eating.</li>
+        </div>
+    {% endif %}
+
+    {% if 141 < blood_glucose_level < 200 : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+    <div class="ans">
+    <li>High Risk Blood Sugar.</li>
+    <strong>Preventative Measures:</strong>
+    <li>Prioritize a balanced diet with whole grains, fruits, vegetables, and lean protein.</li>
+    <li>Consider consulting a registered dietitian or certified diabetes educator for personalized guidance.</li>
+        </div>
+    {% endif %}
+
+    {% if blood_glucose_level > 200 : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+        <div class="ans">
+    <li>Very High Risk Blood Sugar.</li>
+    <li>Seek medical advice immediately.</li>
+    <strong>Preventative Measures:</strong>
+    <li>This blood sugar level might indicate undiagnosed diabetes. Your doctor will recommend the most appropriate course of action, potentially including.</li>
+            </div>
+    {% endif %}
+</div>
+<div class="HbA1c">
+    {% if 5.7 > HbA1c_level : %}
+    <h3 class="H_head">Suggestion on HbA1c level.</h3>
+    <div class="ans">
+    <li>indicates a low risk of developing diabetes.</li></div>
+    {% endif %}
+
+    {% if 5.7 <= HbA1c_level <= 6.4: %}
+    <h3 class="H_head">Suggestion on HbA1c.</h3>
+        <div class="ans">
+    <li>suggests a higher risk of developing diabetes. Here, lifestyle changes become even more important for prevention:</li>
+    <li>You must maintain it below 5.7</li>
+    <li>Focus on balanced diet and physical activity</li></div>
+    {% endif %}
+
+    {% if HbA1c_level > 6.4: %}
+    <h3 class="H_head">Suggestion on HbA1c level.</h3>
+            <div class="ans">
+    <li>hba1c level is above 6.5 ,You have a high risk of diabetes. Consult a doctor</li></div>
+    {% endif %}
+</div>
+<div class="hypertension">
+    {% if hypertension == 1: %}
+    <h3 class="hy_head">Suggestion on hypertension.</h3>
+    <div class="ans">
+    <strong>Diet(Reduce salt intake):</strong>
+    <li>This is a big one! Aim for less than 2,300mg of sodium daily. Consider the DASH diet, which focuses on fruits, vegetables, whole grains, and low-fat dairy  all excellent for blood pressure control.</li>
+    <strong>Exercise:</strong>
+    <li>Regular physical activity, like brisk walking for 30 minutes most days of the week, lowers blood pressure naturally.</li>
+    <strong>Weight management:</strong>
+    <li>Maintaining a healthy weight reduces strain on your heart and circulatory system.</li>
+    <strong>Stress management:</strong>
+    <li>Chronic stress can elevate blood pressure. Find healthy ways to manage stress, like yoga, meditation, or spending time in nature.</li>
+    </div>
+    {% endif %}
+</div>
+<div class="BMI_category">
+    {% if BMI_category == "underweight": %}
+    <h3 class="B_head">Suggestion on BMI category..</h3>
+    <div class="ans">
+    <strong>Focus on a balanced diet:</strong>
+    <li>You are underweight Maintain BMI in between 18.5 to 24.9</li>
+    <li>While weight gain might be recommended, ensure it comes from healthy sources. Prioritize fruits, vegetables, whole grains, and lean protein.</li>
+    <strong>Discuss with your doctor:</strong>
+    <li>There may be underlying reasons for being underweight. Your doctor can help identify these and recommend a healthy weight gain plan.</li></div>
+    {% endif %}
+
+    {% if BMI_category == "overweight": %}
+    <h3 class="B_head">Suggestion on BMI category.</h3>
+        <div class="ans">
+    <strong>Modest weight loss:</strong>
+    <li>You are overweight ,Maintain BMI in between 18.5 to 24.9</li>
+    <li>Aim for gradual weight loss (1-2 lbs per week) through healthy eating and exercise.</li>
+    <strong>Increase physical activity:</strong>
+    <li>Regular exercise helps manage weight and improve insulin sensitivity.</li></div>
+    {% endif %}
+
+    {% if BMI_category in ["obesity class1","obesity class2","obesity class3"]: %}
+    <h3 class="B_head">Suggestion on BMI category.</h3>
+            <div class="ans">
+    <strong>Aggressive weight loss:</strong>
+    <li>You are overweight ,Maintain BMI in between 18.5 to 24.9</li>
+    <li>In addition to lifestyle changes, medications or weight loss surgery might be considered under doctor's supervision.</li>
+    <strong>Blood sugar control:</strong>
+    <li>Regularly monitor blood sugar levels to track progress and identify any pre-diabetic signs.</li>
+    <strong>Increase physical activity:</strong>
+    <li>Regular exercise helps manage weight and improve insulin sensitivity.</li></div>
+    {% endif %}
+</div>
+<div class="smoking_history">
+    {% if smoking_history in ["never","not current"] : %}
+    <h3 class="s_head">Suggestion on smoking_history.</h3>
+    <div class="ans">
+    <li>This is the ideal category for reducing diabetes risk.</li></div>
+    {% endif %}
+
+    {% if smoking_history in ["former","current","ever"] : %}
+    <h3 class="s_head">Suggestion on smoking_history.</h3>
+        <div class="ans">
+    <li>Quitting smoking is the single most beneficial action you can take to reduce your risk of diabetes and improve overall health.</li>
+    <li>Talk to your doctor about resources and strategies to help you quit.</li></div>
+    {% endif %}
+
+</div>
+</div>
+
+</body>
+</html>

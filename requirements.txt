@@ -1,0 +1,12 @@
+Flask
+gunicorn
+jinja2
+numpy
+scipy
+scikit-learn
+pandas
+pickle
+json
+Mail
+pickle
+json

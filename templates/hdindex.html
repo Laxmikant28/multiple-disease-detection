@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease</title>
+    <link rel="stylesheet" href="static/css/hdindex.css">
+
+</head>
+<body class="bg-image">
+
+
+<form action="/heart_results" method='POST'>
+  <div class="main-head">
+    <h1 >Check Your Health</h1>
+  </div>
+
+  <label for="Age">Age:</label><br>
+  <input type="text" id="Age" name="Age"><br>
+
+  <label for="sex">Gender:</label><br>
+  <select name="sex">
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+  </select><br>
+
+  <label for="is_smoking">Smoking history:</label><br>
+  <select name="is_smoking">
+    <option value="NO">NO</option>
+    <option value="YES">YES</option>
+  </select><br>
+
+  <label for="cigsPerDay">cigarettes Per Day:</label><br>
+  <input type="text" id="cigsPerDay" name="cigsPerDay"><br>
+
+  <label for="prevalentStroke">Any prevalentStroke:</label><br>
+  <select name="prevalentStroke">
+    <option value=0>NO</option>
+    <option value=1>YES</option>
+  </select><br>
+
+  <label for="prevalentHyp">Hypertension:</label><br>
+  <select name="prevalentHyp">
+    <option value=0>NO</option>
+    <option value=1>Yes</option>
+  </select><br>
+
+  <label for="diabetes">diabetes patient:</label><br>
+  <select name="diabetes">
+    <option value=0>NO</option>
+    <option value=1>Yes</option>
+  </select><br>
+
+  <label for="totChol">Total cholesterol level:</label><br>
+  <input type="text" id="totChol" name="totChol"><br>
+
+<label for="sysBP">systolic pressure level:</label><br>
+  <input type="text" id="sysBP" name="sysBP"><br>
+
+  <label for="diaBP">diastolic  pressure level:</label><br>
+  <input type="text" id="diaBP" name="diaBP"><br>
+
+  <label for="BMI">BMI:</label><br>
+  <input type="text" id="BMI" name="BMI"><br>
+
+  <label for="heartRate">heartRate:</label><br>
+  <input type="text" id="heartRate" name="heartRate"><br>
+
+  <label for="glucose">glucose level:</label><br>
+  <input type="text" id="glucose" name="glucose"><br>
+
+  <label for="BPMeds">blood pressure medications:</label><br>
+  <select name="BPMeds">
+    <option value=0>NO</option>
+    <option value=1>Yes</option>
+  </select><br>
+
+
+  <button value="Predict">Predict</button>
+</form>
+
+</body>
+</html>

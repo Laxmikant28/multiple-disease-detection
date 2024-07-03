@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="static/css/hdresult.css">
+</head>
+<body>
+<div class="result">
+    {% if result==0: %}
+    <h2 class="green">You are well.. </h2>
+    {% else: %}
+    <h2 class="red">You are Detected as Diabetes Patient....</h2>
+    {% endif %}
+</div>
+
+<div class="suggestion">
+    <h2 class="head">Here are some suggestion...</h2>
+<div class="is_smoking">
+    {% if is_smoking == 1 : %}
+    <h3 class="s_head">Suggestion on smoking.</h3>
+    <div class="ans">
+    <li>Regardless of how much or for how long someone smoked, smoking damages blood vessels, increases inflammation, and raises bad cholesterol (LDL) - all of which contribute to heart disease</li>
+    <strong>Preventative Measures:</strong>
+    <li>Quitting smoking is the single most important step to reduce heart disease risk, even for former smokers.</li>
+        </div>
+    {% endif %}
+</div>
+
+<div class="prevalentStroke">
+    {% if prevalentStroke == 1 : %}
+    <h3 class="p_head">Suggestion on prevalentStroke.</h3>
+    <div class="ans">
+    <strong>Preventative Measures:</strong>
+    <strong>1.Lifestyle Changes:</strong>
+    <li>Prioritize a healthy diet, regular physical activity, weight management, and stress management.</li>
+    <strong>2.Medications:</strong>
+    <li>Your doctor might prescribe medications like blood thinners or statins to further reduce risk.</li>
+        </div>
+    {% endif %}
+</div>
+
+<div class="prevalentHyp">
+    {% if prevalentHyp == 1 : %}
+    <h3 class="h_head">Suggestion on Hypertension.</h3>
+    <div class="ans">
+    <strong>Preventative Measures:</strong>
+    <strong>1.Lifestyle Changes:</strong>
+    <li>Implementing a healthy diet, regular physical activity, weight management, and stress reduction techniques can significantly lower blood pressure.</li>
+    <strong>2.Regular Monitoring:</strong>
+    <li>Schedule regular checkups with your doctor to monitor blood pressure and adjust treatment plans as needed.</li>
+        </div>
+    {% endif %}
+</div>
+
+<div class="diabetes">
+    {% if diabetes == 1 : %}
+    <h3 class="d_head">Suggestion on diabetes.</h3>
+    <div class="ans">
+    <li>Diabetes significantly increases the risk of heart disease. Having diabetes puts additional stress on your blood vessels and increases inflammation, both of which contribute to heart problems.</li>
+    <strong>Preventative Measures:</strong>
+    <strong>1.Blood Sugar Control:</strong>
+    <li>This is the cornerstone of heart disease prevention in diabetes. Work with your doctor to maintain optimal blood sugar levels.</li>
+    <strong>2.Aggressive Risk Factor Management:</strong>
+    <li>Controlling blood pressure and cholesterol levels is even more crucial for someone with diabetes.</li>
+        </div>
+    {% endif %}
+</div>
+
+<div class="totChol">
+    {% if 200 < totChol < 240 %}
+        <h3 class="c_head">Suggestion on Cholesterol.</h3>
+
+    <div class="ans">
+    <li>You are in Borderline High of Cholesterol level</li>
+    <strong>Preventative Measures:</strong>
+    <li>Focus on lifestyle changes to potentially lower cholesterol naturally:</li>
+    <li>Implement the healthy lifestyle changes outlined above (diet, exercise, weight management, stress management).</li>
+    </div>
+    {% endif %}
+
+    {% if 240 < totChol < 300 %}
+        <h3 class="c_head">Suggestion on Cholesterol.</h3>
+
+    <div class="ans">
+    <li>You have High level of Cholesterol</li>
+    <strong>Preventative Measures:</strong>
+    <li>Consider a combination of lifestyle changes and potentially medication.</li>
+    <li>Implement the healthy lifestyle changes outlined above (diet, exercise, weight management, stress management).</li>
+    </div>
+    {% endif %}
+
+    {% if 300 < totChol %}
+        <h3 class="c_head">Suggestion on Cholesterol.</h3>
+
+    <div class="ans">
+    <li>Seek medical advice immediately.This level requires aggressive treatment to reduce heart disease risk </li>
+    <strong>Preventative Measures:</strong>
+    <li>Intensive lifestyle changes as outlined above with a focus on rapid LDL cholesterol reduction.</li>
+    <li>Statin medication or a combination of cholesterol-lowering medications. This will be determined by your doctor based on your individual circumstances.</li>
+    <li>Close monitoring by your doctor with frequent checkups and adjustments to treatment plans as needed.</li>
+    </div>
+    {% endif %}
+</div>
+
+<div class="glucose">
+    {% if 70 > glucose : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+    <div class="ans">
+    <li>Potentially Dangerous Low Blood Sugar.</li>
+    <strong>Preventative Measures:</strong>
+    <li> Seek immediate medical attention. This level indicates hypoglycemia, which can be life-threatening and wouldn't typically occur after eating.</li>
+        </div>
+    {% endif %}
+
+    {% if 141 < glucose < 200 : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+    <div class="ans">
+    <li>High Risk Blood Sugar.</li>
+    <strong>Preventative Measures:</strong>
+    <li>Prioritize a balanced diet with whole grains, fruits, vegetables, and lean protein.</li>
+    <li>Consider consulting a registered dietitian or certified diabetes educator for personalized guidance.</li>
+        </div>
+    {% endif %}
+
+    {% if glucose > 200 : %}
+    <h3 class="g_head">Suggestion on blood glucose level.</h3>
+        <div class="ans">
+    <li>Very High Risk Blood Sugar.</li>
+    <li>Seek medical advice immediately.</li>
+    <strong>Preventative Measures:</strong>
+    <li>This blood sugar level might indicate undiagnosed diabetes. Your doctor will recommend the most appropriate course of action, potentially including:</li>
+            </div>
+    {% endif %}
+</div>
+</div>
+</body>
+</html>

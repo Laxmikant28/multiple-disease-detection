@@ -1,0 +1,35 @@
+.green {background-color: greenyellow;
+    text-align: center;
+padding: 5px;
+}
+.red {background-color: red;
+    text-align: center;
+    padding: 5px;}
+.head{background-color: rgb(223, 203, 176);
+    padding: 5px;}
+.ans{padding-left: 25px;
+padding-bottom: 12px;}
+.glucose{background-color: rgb(2, 255, 255);
+}
+.g_head{background-color: rgb(15, 196, 187);
+    padding: 3px;}
+.is_smoking{background-color: rgb(81, 255, 185);
+}
+.s_head{background-color: rgb(0, 212, 127);
+    padding: 3px;}
+.prevalentStroke{background-color: rgb(116, 114, 255);
+}
+.p_head{background-color: rgb(59, 45, 255);
+    padding: 3px;}
+.prevalentHyp{background-color: rgb(255, 52, 241);
+}
+.h_head{background-color: rgb(185, 12, 174);
+    padding: 3px;}
+.diabetes{background-color: rgb(255, 253, 119);
+}
+.d_head{background-color: rgb(223, 215, 5);
+    padding: 3px;}
+.totChol{background-color: rgb(255, 253, 119);
+}
+.c_head{background-color: rgb(223, 215, 5);
+    padding: 3px;}

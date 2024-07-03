@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-head {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+label {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+input,
+select {
+  display: block;
+  margin: auto;
+  margin-top: 4px;
+  margin-bottom: 5px;
+  width: 35%;
+
+  padding: 5px;
+  background: none;
+  color: black;
+
+  border: 1px solid blue;
+  border-radius: 3px;
+  outline: none;
+}
+select {
+  text-align: center;
+}
+
+body {
+  text-align: center;
+}
+.bg-image{
+background-image: url('medical_img.png');
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;}
+
+button {
+ padding: 5px 10px ;
+  font-size: 17px;
+  margin: 10px;
+  background-color: #04aa6d;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+
+}
+h1 {
+  font-size: 40px;
+}
+form {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 40%;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
